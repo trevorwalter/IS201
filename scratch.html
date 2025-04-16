@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/scratch.css" rel="stylesheet" />
+    <style>
+        /* STEP 1 - Ensure nav stays on top */
+        nav {
+          position: relative;
+          z-index: 10;
+        }
+    
+        nav a {
+          position: relative;
+          z-index: 10;
+        }
+    
+        canvas,
+        #game-over {
+          z-index: 1;
+        }
+    
+        /* STEP 2 - Prevent canvas from blocking clicks */
+        canvas,
+        #game-over {
+          pointer-events: none;
+        }
+      </style>
 </head>
 <body>
     <div class="common header">
